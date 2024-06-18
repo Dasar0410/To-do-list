@@ -1,15 +1,34 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.print("Hello and welcome!");
+        boolean repeat = true;
+        Scanner input = new Scanner(System.in);  // input object
+        System.out.print("Hello!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        while (repeat){
+            ShowMenu();
+            System.out.print("Enter your choice (1-9): ");
+            int choice = Integer.parseInt(input.nextLine());  // Choose 1-7
+            if (choice == 7){
+                repeat = false;
+            }
         }
+
+    }
+
+    private static void ShowMenu() {
+        System.out.println("\nTo-Do List Menu:");
+        System.out.println("1. Add Task");
+        System.out.println("2. Remove Task");
+        System.out.println("3. Mark Task as Completed");
+        System.out.println("4. List All Tasks");
+        System.out.println("5. Save Tasks to File");
+        System.out.println("6. Load Tasks from File");
+        System.out.println("7. Exit");
+
     }
 }
+
+
+
