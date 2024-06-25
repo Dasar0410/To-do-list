@@ -6,6 +6,7 @@ public class Main {
         boolean repeat = true;
         Scanner input = new Scanner(System.in);  // input object
         System.out.print("Hello!");
+        int id = 1; // remove
 
         while (repeat){
             ShowMenu();
@@ -15,7 +16,8 @@ public class Main {
                 case 1:
                     System.out.print("What is the taskname:");
                     String name = input.nextLine();
-                    taskManager.newTask(name);
+                    taskManager.addTask(name,id);
+                    id++; // remove
                     break;
                 case 2:
                     break;
