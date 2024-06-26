@@ -5,10 +5,10 @@ import java.util.List;
 public class taskManager {
 
    public taskManager() {
-       ArrayList<task> tasks = new ArrayList<task>();
+       ArrayList<Task> tasks = new ArrayList<Task>();
     }
 
-    public static void addTask(String name, int id){
-        task newTask = new task(name,id );
+    public static void addTask(String name, int id, String description, boolean isCompleted){
+        Task newTask = new Task(name,id,description,isCompleted);
     }
 }

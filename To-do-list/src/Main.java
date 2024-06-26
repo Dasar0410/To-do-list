@@ -16,7 +16,8 @@ public class Main {
                 case 1:
                     System.out.print("What is the taskname:");
                     String name = input.nextLine();
-                    taskManager.addTask(name,id);
+                    String description = "test";
+                    taskManager.addTask(name,id,description,false);
                     id++; // remove
                     break;
                 case 2:
