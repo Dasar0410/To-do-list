@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+// Console based menu that interacts with user and calls the corresponding method from taskManager
 public class Main {
 
     public static void main(String[] args) {
