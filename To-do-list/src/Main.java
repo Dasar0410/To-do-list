@@ -1,12 +1,15 @@
 import java.util.Scanner;
 // Console based menu that interacts with user and calls the corresponding method from taskManager
-public class Main {
 
+// fix naming convention senere
+public class Main {
+    private static taskManager taskManager = new taskManager();
+    private static Scanner input = new Scanner(System.in);  // input object
     public static void main(String[] args) {
         boolean repeat = true;
-        Scanner input = new Scanner(System.in);  // input object
+
         System.out.print("Hello!");
-        int id = 1; // remove
+
 
         while (repeat){
             ShowMenu();
@@ -14,11 +17,7 @@ public class Main {
             int choice = Integer.parseInt(input.nextLine());  // Choose 1-7
             switch(choice){
                 case 1:
-                    System.out.print("What is the taskname:");
-                    String name = input.nextLine();
-                    String description = "test";
-                    taskManager.addTask(name,id,description,false);
-                    id++; // remove
+                    addTask();
                     break;
                 case 2:
                     break;
@@ -46,6 +45,16 @@ public class Main {
         System.out.println("5. Save Tasks to File");
         System.out.println("6. Load Tasks from File");
         System.out.println("7. Exit");
+    }
+
+    private static void addTask(){
+        // takes in user input and sends to taskManager method
+        System.out.print("What is the taskname:");
+        String name = input.nextLine();
+        System.out.print("What is the description:");
+        String description = input.nextLine();
+        taskManager.addTask(name,description);
+
     }
 
 

@@ -3,12 +3,17 @@ import java.util.List;
 
 
 public class taskManager {
+    private List<Task> tasks;
+    private int nextId;
 
    public taskManager() {
-       ArrayList<Task> tasks = new ArrayList<Task>();
+       tasks = new ArrayList<Task>();
+       nextId = 1;
     }
 
-    public static void addTask(String name, int id, String description, boolean isCompleted){
-        Task newTask = new Task(name,id,description,isCompleted);
+    public void addTask(String name, String description){
+       // adds task to arraylist based on input from main
+        Task newTask = new Task(name,nextId,description,false);
+        tasks.add(newTask);
     }
 }
