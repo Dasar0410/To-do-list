@@ -29,5 +29,9 @@ public class Task{
 
         return isCompleted;
     }
+
+    public String toString(){
+        return "       name: " + name + "\ndescription: "  + description + "\n  completed: " + isCompleted;
+    }
 }
 

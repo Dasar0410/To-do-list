@@ -16,4 +16,10 @@ public class taskManager {
         Task newTask = new Task(name,nextId,description,false);
         tasks.add(newTask);
     }
+
+    public void listTasks(){
+        for (Task task : tasks) { //for each task in tasks
+            System.out.println(task.toString());
+        }
+    }
 }

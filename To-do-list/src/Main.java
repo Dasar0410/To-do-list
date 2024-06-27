@@ -24,6 +24,7 @@ public class Main {
                 case 3:
                     break;
                 case 4:
+                    listTasks();
                     break;
                 case 5:
                     break;
@@ -57,7 +58,11 @@ public class Main {
 
     }
 
+    private static void listTasks(){
+        System.out.println("Here are all the tasks:");
+        taskManager.listTasks();
 
+    }
 }
 
 
