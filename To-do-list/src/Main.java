@@ -20,15 +20,19 @@ public class Main {
                     addTask();
                     break;
                 case 2:
+                    //removeTask();
                     break;
                 case 3:
+                    //completeTask();
                     break;
                 case 4:
                     listTasks();
                     break;
                 case 5:
+                    //saveTasks();
                     break;
                 case 6:
+                    //loadTasks();
                     break;
                 case 7:
                     repeat = false;

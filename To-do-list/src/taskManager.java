@@ -18,8 +18,9 @@ public class taskManager {
     }
 
     public void listTasks(){
-        for (Task task : tasks) { //for each task in tasks
-            System.out.println(task.toString());
+        for (int i = 0; i < tasks.size(); i++) { //for each task in tasks
+
+            System.out.println(i + ": \n" + tasks.get(i).toString());
         }
     }
 }
